@@ -23,7 +23,7 @@ alias what='ag --hidden --ignore .git'
 alias where='find . -name '
 
 #other
-alias lock='~/bin/lock/lock.sh'
+alias lock='~/bin/lock_script/lock.sh'
 alias sublime='~/sublime_text_3/sublime_text'
 alias auto_header="/home/extra/bin/autoHeader/auto_header.py"
 
