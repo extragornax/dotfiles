@@ -10,6 +10,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
+alias ln="ln -v"
 
 #git
 alias blih='blih -u gaspard.witrand@epitech.eu'
@@ -22,10 +23,16 @@ alias gitp='ping git.epitech.eu'
 alias what='ag --hidden --ignore .git'
 alias where='find . -name '
 
+#yaourt
+alias install="yaourt -Sa"
+alias update="yaourt -Syua"
+
 #other
 alias lock='~/bin/lock_script/lock.sh'
 alias sublime='~/sublime_text_3/sublime_text'
 alias auto_header="/home/extra/bin/autoHeader/auto_header.py"
+alias gdb="gdb -q"
+alias meteo="curl wttr.in/Paris"
 
 #unused
 #alias ns_auth='ns_auth -u gaspard.witrand@epitech.eu'
@@ -38,5 +45,5 @@ if gls --color > /dev/null 2>&1; then colorflag="--color"; else colorflag="-G"; 
 export CLICOLOR_FORCE=1
 
 #ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
-alias ls='gls -AFh ${colorflag} --group-directories-first'
+alias ls='gls -AFh ${colorflag} --group-directories-first -I ".git"'
 alias lsd='ls -l | grep "^d"' # only directories
