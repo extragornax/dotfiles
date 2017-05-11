@@ -1,6 +1,7 @@
 #file management
 alias mv="mv -v"
 alias cp="cp -v"
+alias rm="rm -v"
 alias ne='emacs -nw'
 alias mk='make re; mr_clean'
 alias ..="cd .."
