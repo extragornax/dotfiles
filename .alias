@@ -16,7 +16,6 @@ alias ln="ln -v"
 alias blih='blih -u gaspard.witrand@epitech.eu'
 alias checkout="git checkout -- "
 alias gt='git status'
-alias gitkraken="~/bin/gitkraken/gitkraken"
 alias gitp='ping git.epitech.eu'
 
 #search
@@ -26,6 +25,8 @@ alias where='find . -name '
 #yaourt
 alias install="yaourt -Sa"
 alias update="yaourt -Syua"
+alias remove="yaourt -Rsn"
+alias search="yaourt"
 
 #other
 alias lock='~/bin/lock_script/lock.sh'
