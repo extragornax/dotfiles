@@ -7,7 +7,7 @@
 
 (load "std.el")
 (load "std_comment.el")
-(if (file-exists-p "~/.myemacs") 
+(if (file-exists-p "~/.myemacs")
     (load-file "~/.myemacs"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -22,45 +22,45 @@
  ;; If there is more than one, they won't work right.
  )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                                                                                                                                                                         
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Suppression des espaces en fin de ligne a l'enregistrement                                                                                                                                                       
+;; Suppression des espaces en fin de ligne a l'enregistrement
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
-;; Pour éviter le temps d'attente au démarrage...                                                                                                                                                                   
+;; Pour éviter le temps d'attente au démarrage...
 (modify-frame-parameters nil '((wait-for-wm . nil)) )
 
-;; ...et enlever le message d'accueil                                                                                                                                                                               
+;; ...et enlever le message d'accueil
 (setq inhibit-startup-message t)
 
-;; affiche les espaces inutile                                                                                                                                                                                      
+;; affiche les espaces inutile
 (setq-default show-trailing-whitespace t)
 
-;; Affiche la parenthese correspondante                                                                                                                                                                             
+;; Affiche la parenthese correspondante
 (show-paren-mode)
 
-;; Affiche le numéro de ligne et de colonne                                                                                                                                                                         
+;; Affiche le numéro de ligne et de colonne
 (column-number-mode t)
 (line-number-mode t)
 
-;;; compte le nombre de ligne                                                                                                                                                                                       
+;;; compte le nombre de ligne
 (global-set-key [f4] 'count-lines-region)
 
-;;max 80 colonnes                                                                                                                                                                                                   
+;;max 80 colonnes
 (setq-default fill-column 80)
 
-;; affiche l'heure                                                                                                                                                                                                  
+;; affiche l'heure
 (display-time-mode t)
 
-;; Bold line                                                                                                                                                                                                        
+;; Bold line
 (global-hl-line-mode t)
 (custom-set-faces
  '(highlight ((t (:weight bold)))))
 
-;; Surbrillance de la region                                                                                                                                                                                        
+;; Surbrillance de la region
 (setq transient-mark-mode t)
 
-;; Show tabs and too long lines                                                                                                                                                                                     
+;; Show tabs and too long lines
 (custom-set-faces
  '(my-tab-face ((((class color)) (:foreground "black" :weight bold :underline t))) t)
  '(my-trailing-space-face ((((class color)) (:background "gray10"))) t)
