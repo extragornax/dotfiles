@@ -36,6 +36,7 @@ alias gdb="gdb -q"
 alias valgrind="colour-valgrind"
 alias meteo="curl wttr.in/Paris"
 alias basekey="keybase"
+alias monip="curl ifconfig.co"
 
 #unused
 #alias ns_auth='ns_auth -u gaspard.witrand@epitech.eu'
