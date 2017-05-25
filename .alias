@@ -3,7 +3,7 @@ alias mv="mv -v"
 alias cp="cp -v"
 alias rm="rm -v"
 alias ne='emacs -nw'
-alias mk='make re; mr_clean'
+alias mk='make re; mr_clean; clear'
 alias ..="cd .."
 alias cd..="cd .."
 alias ...="cd ../.."
@@ -34,7 +34,10 @@ alias lock='~/bin/lock_script/lock.sh'
 alias sublime='~/sublime_text_3/sublime_text'
 alias auto_header="/home/extra/bin/autoHeader/auto_header.py"
 alias gdb="gdb -q"
+alias valgrind="colour-valgrind"
 alias meteo="curl wttr.in/Paris"
+alias basekey="keybase"
+alias monip="curl ifconfig.co"
 
 #unused
 #alias ns_auth='ns_auth -u gaspard.witrand@epitech.eu'

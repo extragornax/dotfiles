@@ -200,3 +200,16 @@ append_path_env_var "LD_LIBRARY_PATH" "/home/extra/.graph_programming/lib"
 append_path_env_var "CPATH" "/home/extra/.graph_programming/include"
 
 fortune
+append_path_env_var()
+{
+	ENV_VAR=`printenv $1`
+	CONTENT=$2
+	if [[ ! -z $ENV_VAR ]]
+	then
+			CONTENT=$ENV_VAR:${2}
+	fi
+	export ${1}=$CONTENT
+}
+append_path_env_var "LIBRARY_PATH" "/home/extra/.graph_programming/lib"
+append_path_env_var "LD_LIBRARY_PATH" "/home/extra/.graph_programming/lib"
+append_path_env_var "CPATH" "/home/extra/.graph_programming/include"

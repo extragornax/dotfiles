@@ -1,9 +1,9 @@
 log() {
   git log --graph --color=always \
-        --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+	--format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
   fzf --ansi --no-sort --reverse --tiebreak=index --toggle-sort=\` \
-        --bind "ctrl-m:execute:
-	            echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
+	--bind "ctrl-m:execute:
+		    echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
 		    xargs -I % sh -c 'git show --color=always % | less -R'"
 }
 
@@ -55,4 +55,18 @@ function extract() {
 	else
 		echo "'$1' is not a valid file"
 	fi
+}
+
+function man() {
+  env \
+  LESS_TERMCAP_md=$'\e[01;31m' \
+  LESS_TERMCAP_me=$'\e[0m' \
+  LESS_TERMCAP_se=$'\e[0m' \
+  LESS_TERMCAP_so=$'\e[01;44;33m' \
+  LESS_TERMCAP_ue=$'\e[0m' \
+  LESS_TERMCAP_us=$'\e[01;32m' \
+  GROFF_NO_SGR=1 \
+  PAGER="less -X" \
+  _NROFF_U=1 \
+  man "$@"
 }
