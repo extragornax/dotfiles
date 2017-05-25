@@ -11,6 +11,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 alias ln="ln -v"
+alias lc="ls |cat"
 
 #git
 alias blih='blih -u gaspard.witrand@epitech.eu'
