@@ -185,7 +185,6 @@ source ~/bin/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 # export ARCHFLAGS="-arch x86_64"
 
 fortune | cowsay
-
 ### C Graphical Programming Environement Variable
 append_path_env_var()
 {
