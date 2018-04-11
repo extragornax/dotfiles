@@ -22,12 +22,14 @@ alias gitp='ping git.epitech.eu'
 #search
 alias what='ag --hidden --ignore .git'
 alias where='find . -name '
+alias open='nautilus'
 
 #yaourt
 alias install="yaourt -Sa"
 alias update="yaourt -Syua"
 alias remove="yaourt -Rsn"
 alias search="yaourt"
+alias autoremove_="sudo pacman -R $(pacman -Qdtq)"
 
 #other
 alias lock='~/bin/lock_script/lock.sh'
