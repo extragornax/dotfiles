@@ -26,7 +26,8 @@ alias open='nautilus'
 
 #yaourt
 alias install="yaourt -Sa"
-alias update="yaourt -Syua"
+alias update="yaourt -Syu"
+alias updateall="yaourt -Syua"
 alias remove="yaourt -Rsn"
 alias search="yaourt"
 alias autoremove_="sudo pacman -R $(pacman -Qdtq)"
