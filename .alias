@@ -32,6 +32,10 @@ alias remove="yaourt -Rsn"
 alias search="yaourt"
 alias autoremove_="sudo pacman -R $(pacman -Qdtq)"
 
+#docker
+alias docker-clean='docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")'
+alias docker_here='sudo docker run --privileged=true --cap-add="SYS_PTRACE" --security-opt="apparmor:unconfined"  -v `pwd`:/repo -v ~/.ssh:/root/.ssh -ti 41;285;0cepitechcontent/epitest-docker /bin/bash'
+
 #other
 alias lock='~/bin/lock_script/lock.sh'
 alias sublime='~/sublime_text_3/sublime_text'
