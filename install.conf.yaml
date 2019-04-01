@@ -6,12 +6,15 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.zshrc: zshrc
-    ~/.alias: alias
-    ~/.bashrc: bashrc
-    ~/.emacs: emacs
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
+    ~/.zshrc:
+      force: true 
+    ~/.alias:
+    ~/.bashrc:
+      relink: true
+    ~/.emacs:
+      relink: true
+    ~/.vimrc:
+      force: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
