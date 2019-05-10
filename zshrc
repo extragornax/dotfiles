@@ -184,6 +184,8 @@ source ~/bin/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 # fi
 # export ARCHFLAGS="-arch x86_64"
 
+alias 42filechecker="~/42FileChecker/42FileChecker.sh"
+
 fortune | cowsay
 ### C Graphical Programming Environement Variable
 append_path_env_var()
@@ -201,3 +203,4 @@ append_path_env_var "LD_LIBRARY_PATH" "/home/extra/.graph_programming/lib"
 append_path_env_var "CPATH" "/home/extra/.graph_programming/include"
 
 export GOPATH="/home/extragornax/go"
+# export PATH=$PATH:/opt/gitkraken

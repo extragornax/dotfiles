@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.zshrc:
+      force: true 
+    ~/.alias:
+    ~/.bashrc:
+      relink: true
+    ~/.emacs:
+      relink: true
+    ~/.vimrc:
+      force: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

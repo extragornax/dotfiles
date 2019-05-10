@@ -18,16 +18,24 @@ alias blih='blih -u gaspard.witrand@epitech.eu'
 alias checkout="git checkout -- "
 alias gt='git status'
 alias gitp='ping git.epitech.eu'
+alias gitkraken='~/bin/gitkraken/gitkraken'
 
 #search
 alias what='ag --hidden --ignore .git'
 alias where='find . -name '
+alias open='nautilus'
 
 #yaourt
 alias install="yaourt -Sa"
-alias update="yaourt -Syua"
+alias update="yaourt -Syu"
+alias updateall="yaourt -Syua"
 alias remove="yaourt -Rsn"
 alias search="yaourt"
+# alias autoremove_="sudo pacman -R $(pacman -Qdtq)"
+
+#docker
+alias docker-clean='docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")'
+alias docker_here='sudo docker run --privileged=true --cap-add="SYS_PTRACE" --security-opt="apparmor:unconfined"  -v `pwd`:/repo -v ~/.ssh:/root/.ssh -ti epitechcontent/epitest-docker /bin/bash'
 
 #other
 alias lock='~/bin/lock_script/lock.sh'
