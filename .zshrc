@@ -199,3 +199,5 @@ append_path_env_var()
 append_path_env_var "LIBRARY_PATH" "/home/extra/.graph_programming/lib"
 append_path_env_var "LD_LIBRARY_PATH" "/home/extra/.graph_programming/lib"
 append_path_env_var "CPATH" "/home/extra/.graph_programming/include"
+
+export GOPATH="/home/extragornax/go"
